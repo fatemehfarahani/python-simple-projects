@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-light">
+    <div class="main-content">
+        <h1 class="app-title">
+            <i class='bx bxs-cloud'></i> Weather App
+        </h1>
+        <div class="weather-container">
+            <form method="post" class="mb-4">
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <i class='bx bxs-map'></i>
+                    </span>
+                    <input type="text" name="city" class="form-control" placeholder="Enter city name">
+                    <button type="submit" class="btn btn-primary">
+                        <i class='bx bx-search'></i>
+                    </button>
+                </div>
+            </form>
+            {% if weather %}
+                {% if weather.error %}
+                    <div class="alert alert-danger mt-3">
+                        <i class='bx bx-error-circle'></i> {{ weather.error }}
+                    </div>
+                {% else %}
+                    <div class="card mx-auto mt-4 shadow weather-card">
+                        <div class="card-body text-center">
+                            <h2 class="card-title mb-3">
+                                <i class='bx bxs-city'></i> {{ weather.city }}
+                            </h2>
+                            <div class="mb-3">
+                                <i class='bx bxs-thermometer'></i>
+                                <span class="fs-2 fw-bold">{{ weather.temperature }}°C</span>
+                            </div>
+                            <div class="mb-2">
+                                <i class='bx bxs-cloud'></i>
+                                <span class="text-capitalize">{{ weather.description }}</span>
+                            </div>
+                            <div class="mb-2">
+                                <i class='bx bx-water'></i>
+                                Humidity: {{ weather.humidity }}%
+                            </div>
+                            <div>
+                                <i class='bx bx-wind'></i>
+                                Wind: {{ weather.wind }} Km/h
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body, html {
+    height: 100%;
+    background: url('images/background_img.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.main-content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    color: #007bff;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.weather-container {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(245,245,245,0.15);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 16px;
+    padding: 30px 20px;
+    color: #fff;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+}
+
+.input-group-text {
+    background: transparent;
+    border: none;
+}
+
+.input-group .form-control {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.input-group .form-control::placeholder {
+    color: #e0e0e0;
+    opacity: 1;
+}
+
+.input-group .btn-primary {
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 0 20px;
+}
+
+.card.weather-card {
+    background: rgba(255,255,255,0.15);
+    color: #222;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.17);
+}
+
+.card.weather-card .card-title {
+    color: #007bff;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.card.weather-card i {
+    color: #007bff;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+.alert-danger {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .weather-container {
+        max-width: 95vw;
+        padding: 20px 5px;
+    }
+    .app-title {
+        font-size: 1.3rem;
+    }
+}

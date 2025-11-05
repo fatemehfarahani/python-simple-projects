@@ -1,0 +1,17 @@
+date,category,amount,description
+2024-06-01 00:00:00,Food,120.0,Restaurant
+2024-06-02 00:00:00,Transport,30.0,Bus ticket
+2024-06-03 00:00:00,Shopping,200.0,Clothes
+2024-06-04 00:00:00,Food,50.0,Groceries
+2024-06-05 00:00:00,Entertainment,80.0,Movie
+2024-06-06 00:00:00,Transport,20.0,Taxi
+2024-06-07 00:00:00,Food,60.0,Cafe
+2024-06-08 00:00:00,Health,150.0,Doctor visit
+2024-06-09 00:00:00,Shopping,100.0,Books
+2024-06-10 00:00:00,Entertainment,60.0,Concert
+2024-06-11 00:00:00,Transport,40.0,Metro
+2024-06-12 00:00:00,Food,90.0,Fast food
+2024-06-13 00:00:00,Health,70.0,Pharmacy
+2024-06-14 00:00:00,Shopping,250.0,Electronics
+2024-06-15 00:00:00,Food,110.0,Supermarket
+
